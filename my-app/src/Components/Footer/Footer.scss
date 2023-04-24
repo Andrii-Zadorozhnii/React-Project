@@ -1,0 +1,9 @@
+@use "../Styles/var.scss" as var;
+
+footer{
+  display: block;
+  width: 100%;
+  background: var.$bgMainColor;
+  color: var.$headerAndFooterColor;
+  padding: var.$sidePadding;
+}

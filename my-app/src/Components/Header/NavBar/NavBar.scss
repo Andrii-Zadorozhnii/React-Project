@@ -1,0 +1,15 @@
+@use '../../Styles/var.scss' as var;
+
+
+.navMenu{
+    background: var.$bgMainColor;
+    color: var.$headerAndFooterColor;
+    text-align: center;
+    align-items: center;
+    height: 40px;
+    padding: 13px;
+
+    & > a{
+        padding: 0 18px;
+    }
+}

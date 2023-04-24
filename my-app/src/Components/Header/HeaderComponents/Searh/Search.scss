@@ -1,0 +1,13 @@
+@use '../../../Styles/var.scss' as var;
+
+.search{
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-right: var.$headerBorder;
+
+  &-svg{
+    fill: white;
+  }
+}

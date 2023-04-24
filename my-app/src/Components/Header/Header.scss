@@ -1,0 +1,16 @@
+@use "../Styles/var.scss" as var;
+
+header{
+  display: flex;
+  width: 100%;
+  height: 51px;
+  background: var.$bgMainColor;
+  color: var.$headerAndFooterColor;
+  padding: var.$sidePadding;
+  border-bottom: var.$headerBorder;
+  justify-content: space-between;
+}
+
+.search-area{
+  display: flex;
+}
