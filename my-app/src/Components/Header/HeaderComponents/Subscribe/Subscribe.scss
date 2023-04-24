@@ -7,6 +7,17 @@
   padding: 0 15px;
   border-left: var.$headerBorder;
   border-right: var.$headerBorder;
+  text-align: center;
+  font-size: var.$generalFontSize;
+  text-transform: uppercase;
+
+  &:nth-child(1){
+    &:nth-child(1){
+      &:nth-child(1){
+        font-size: 5px;
+      }
+    }
+  }
 
   &__image{
     height: 25px;

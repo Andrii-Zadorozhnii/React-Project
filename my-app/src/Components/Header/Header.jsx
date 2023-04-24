@@ -9,11 +9,13 @@ function Header() {
     return (
         <>
             <header>
-                <Join/>
-                <HeaderLabel/>
-                <div className='search-area'>
-                    <Subscribe/>
-                    <Search/>
+                <div className="header-box">
+                    <Join/>
+                    <HeaderLabel/>
+                    <div className='search-area'>
+                        <Subscribe/>
+                        <Search/>
+                    </div>
                 </div>
             </header>
         </>

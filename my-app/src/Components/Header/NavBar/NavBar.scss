@@ -6,10 +6,12 @@
     color: var.$headerAndFooterColor;
     text-align: center;
     align-items: center;
-    height: 40px;
+    height: fit-content;
     padding: 13px;
 
     & > a{
         padding: 0 18px;
+        font-size: var.$generalFontSize;
+        font-weight: bold;
     }
 }

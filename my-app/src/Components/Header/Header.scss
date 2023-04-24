@@ -1,14 +1,25 @@
 @use "../Styles/var.scss" as var;
 
 header{
-  display: flex;
+
   width: 100%;
   height: 51px;
   background: var.$bgMainColor;
   color: var.$headerAndFooterColor;
   padding: var.$sidePadding;
   border-bottom: var.$headerBorder;
+
+}
+
+.header-box{
+  display: flex;
+  height: 51px;
+  background: var.$bgMainColor;
+  color: var.$headerAndFooterColor;
   justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  border-bottom: var.$headerBorder;
 }
 
 .search-area{

@@ -1,4 +1,4 @@
-import styled from 'style-components';
+// import styled from 'style-components';
 import './NavBar.scss';
 const navMenu = ['NEWS','COMICS','CHARACTERS','MOVIES','TV SHOWS','GAMES','VIDEOS','MORE'];
 
