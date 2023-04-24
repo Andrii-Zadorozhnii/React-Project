@@ -1,9 +1,46 @@
 @use "../Styles/var.scss" as var;
 
-footer{
-  display: block;
+.footer {
+  width: 100%;
+  height: fit-content;
   width: 100%;
   background: var.$bgMainColor;
   color: var.$headerAndFooterColor;
   padding: var.$sidePadding;
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-top: 80px;
+  padding-bottom: 30px;
+
+
+  &-logo {
+    width: 80px;
+    margin-right: 60px;
+    //align-items: center;
+    //margin: 0 auto;
+  }
+
+  &-nav {
+    margin-right: 60px;
+    width: 122px;
+    //align-items: center;
+    //margin: 0 auto;
+
+    &__item {
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      font-size: 13px;
+      letter-spacing: 1px;
+
+
+      &-link {
+        &:hover {
+          color: lightgrey;
+        }
+      }
+
+    }
+  }
+
 }

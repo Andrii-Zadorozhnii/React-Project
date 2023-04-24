@@ -1,0 +1,20 @@
+.mainSectionTitle{
+  text-align: center;
+  color: white;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 9999;
+
+  & h2{
+    font-size: 44px;
+    font: 500 RobotoCondensed Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+    transition: font-size .2s ease;
+    letter-spacing: .5px;
+  }
+}

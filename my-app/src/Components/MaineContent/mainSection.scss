@@ -1,0 +1,22 @@
+.main-section{
+  min-height: 300px;
+  height: fit-content;
+  background-image: url(./images/Background.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.main-section::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.85;
+  z-index: 1;
+}

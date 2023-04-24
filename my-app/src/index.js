@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 //Styles
-import '../src/Components/reset.scss';
+import './Components/Styles/reset.scss';
 import '../src/Components/Styles/general.scss';
 
 //***********************************************
@@ -10,6 +10,7 @@ import '../src/Components/Styles/general.scss';
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import NavBar from "./Components/Header/NavBar/NavBar";
+import MainSection from "./Components/MaineContent/MainSection";
 //***********************************************
 
 
@@ -18,6 +19,7 @@ root.render(
     <React.StrictMode>
         <Header/>
         <NavBar/>
-        {/*<Footer />*/}
+        <MainSection />
+        <Footer />
     </React.StrictMode>
 );

@@ -12,10 +12,8 @@
   text-transform: uppercase;
 
   &:nth-child(1){
-    &:nth-child(1){
-      &:nth-child(1){
-        font-size: 5px;
-      }
+    &:nth-child(1) span{
+        font-size: 10px;
     }
   }
 
