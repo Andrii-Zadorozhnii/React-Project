@@ -32,8 +32,9 @@ function Footer() {
                 <div className="main-footer__promotion">
                     <a className="main-footer__promotion-link"
                        href="https://www.marvel.com/insider?cid=Dcom_navigation_20200929_insider_footer">
-                        <div className="main-footer__promotion-image-wrapper">
-
+                        <div className="main-footer__promotion-image">
+                            <img src="https://cdn.marvel.com/content/1x/marvel_insider-topnav-logo-large2x.png"
+                                 alt="Marvel Insider Logo" className="main-footer__promotion-image"></img>
                         </div>
                         <div className="main-footer__promotion-info">
                             <h4 className="main-footer__promotion-title">Marvel Insider</h4>
@@ -45,7 +46,8 @@ function Footer() {
                     <a className="main-footer__promotion-link"
                        href="https://www.marvel.com/unlimited?cid=dcom_navigation_20220712_unlimited_footer">
                         <div className="main-footer__promotion-image-wrapper">
-
+                            <img src="https://cdn.marvel.com/content/1x/mu-logo-w-nav-2x-2021-02.png"
+                                 alt="Marvel Unlimited Logo" className="main-footer__promotion-image"></img>
                         </div>
                         <div className="main-footer__promotion-info">
                             <h4 className="main-footer__promotion-title">Marvel Unlimited</h4>
@@ -55,7 +57,7 @@ function Footer() {
                 </div>
             </div>
         </footer>
-    )
+)
 }
 
 export default Footer;

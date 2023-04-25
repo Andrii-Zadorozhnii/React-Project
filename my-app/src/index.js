@@ -11,6 +11,7 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import NavBar from "./Components/Header/NavBar/NavBar";
 import MainSection from "./Components/MaineContent/MainSection";
+import CharactersApi from "./Components/MaineContent/Characters/CharactersApi/CharactersApi";
 //***********************************************
 
 
@@ -21,5 +22,6 @@ root.render(
         <NavBar/>
         <MainSection />
         <Footer />
+        <CharactersApi />
     </React.StrictMode>
 );

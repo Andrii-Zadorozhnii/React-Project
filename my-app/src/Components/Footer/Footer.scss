@@ -43,4 +43,44 @@
     }
   }
 
+
 }
+
+.main-footer__promotion {
+  margin-bottom: 20px;
+
+  &-link {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-family: RobotoCondensed Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+
+  }
+
+  &-image{
+    width: 55px;
+  }
+
+  &-info{
+    & h4{
+      font-family: RobotoCondensed Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
+      font-size: 14px;
+      letter-spacing: 2px;
+      line-height: 1;
+      color: var.$headerAndFooterColor;
+      text-align: left;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    & p{
+      color: #767676;
+      font-family: Roboto,Trebuchet MS,Helvetica,Arial,sans-serif;
+      font-size: 14px;
+    }
+  }
+}
+
+
+
