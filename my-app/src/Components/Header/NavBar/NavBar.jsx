@@ -1,21 +1,27 @@
-// import styled from 'style-components';
+import { useState } from 'react';
 import './NavBar.scss';
-const navMenu = ['NEWS','COMICS','CHARACTERS','MOVIES','TV SHOWS','GAMES','VIDEOS','MORE'];
+import CharactersApi from "../../MaineContent/Characters/CharactersApi/CharactersApi";
+
+const navMenu = ['NEWS', 'COMICS', 'CHARACTERS', 'MOVIES', 'TV SHOWS', 'GAMES', 'VIDEOS', 'MORE'];
 
 function NavBar() {
+    const [showCharacters, setShowCharacters] = useState(false);
+
     const menu = navMenu.map((item, index) => {
         return (
-
-            <a key={index} className={`navMenu-${index+1}`} href={`/`}>
+            <a key={index} className={`navMenu-${index + 1}`} href={`#`} onClick={() => setShowCharacters(!showCharacters)}>
                 {item}
             </a>
         );
     });
 
     return (
-        <nav className="navMenu">
-            {menu}
-        </nav>
+        <div>
+            <nav className="navMenu">
+                {menu}
+            </nav>
+            {showCharacters && <CharactersApi />}
+        </div>
     );
 }
 

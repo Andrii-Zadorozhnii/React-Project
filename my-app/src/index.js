@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Router } from 'react-router-dom';
 //Styles
 import './Components/Styles/reset.scss';
 import '../src/Components/Styles/general.scss';
@@ -22,6 +23,7 @@ root.render(
         <NavBar/>
         <MainSection />
         <Footer />
-        <CharactersApi />
+        {/*<CharactersApi />*/}
+
     </React.StrictMode>
 );
