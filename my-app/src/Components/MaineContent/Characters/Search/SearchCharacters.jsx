@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import './SearchCharacters.scss';
 
 function SearchCharacters() {
     const [searchTerm, setSearchTerm] = useState('');
@@ -11,7 +10,6 @@ function SearchCharacters() {
     const handleSearch = () => {
         // Do something with the search term
         console.log(searchTerm);
-        document.querySelector('.character-box').style.display = 'none';
     };
 
     return (
@@ -27,5 +25,6 @@ function SearchCharacters() {
         </div>
     );
 }
+
 
 export default SearchCharacters;

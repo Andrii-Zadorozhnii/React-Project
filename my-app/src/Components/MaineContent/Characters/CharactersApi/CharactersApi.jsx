@@ -1,19 +1,19 @@
 import {useState, useEffect} from 'react';
 import './CharactersApi.scss';
-import SearchCharacters from "../Search/SearchCharacters";
+import SearchCharacters from '../Search/SearchCharacters';
 import '../Search/SearchCharacters.scss';
 
-
-
+//https://gateway.marvel.com/v1/public/comics?ts=1&apikey=9b9a40427eb372f72b3775e4f456a370&hash=97a77a62ca6b19c0c250ad87841df189
 function MarvelCharacters() {
     const [name, setName] = useState([]);
+    const [showAll, setShowAll] = useState(false);
 
     useEffect(() => {
         const apiUrl = 'https://gateway.marvel.com:443/v1/public/characters?';
         const apiKey = '9b9a40427eb372f72b3775e4f456a370';
         const ts = '1';
         const hash = '97a77a62ca6b19c0c250ad87841df189';
-        let limit = '100';
+        const limit = '100';
 
         const url = `${apiUrl}limit=${limit}&ts=${ts}&apikey=${apiKey}&hash=${hash}`;
 
@@ -43,28 +43,29 @@ function MarvelCharacters() {
             });
     }, []);
 
-    let Card = () => {
+    const toggleShowAll = () => {
+        setShowAll((prevState) => !prevState);
+    };
+
+    const Card = () => {
         return (
             <div className={'character-box__main'}>
                 <div className='character-box__main-header'>
                     <h1>Marvel Characters</h1>
                     <SearchCharacters />
-                    <button className='search-box-btn' onClick={() => document.querySelector('.character-box').style.display = 'flex'}>
-                        All characters
+                    <button className='search-box-btn' onClick={toggleShowAll}>
+                        {showAll ? 'Hide characters' : 'All characters'}
                     </button>
                 </div>
-                <ul className={'character-box'} style={{display: 'none'}}>
+                <ul className={'character-box'} style={{display: showAll ? 'flex' : 'none'}}>
                     {name.map((character) => (
-                        <a className={'character-box__link'} href={'/'}>
-                            <li className={'character-box__image'} key={character.image}>
-                                <img
-                                    src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-                                />
+                        <a className={'character-box__link'} href={'/'} key={character.id}>
+                            <li className={'character-box__image'}>
+                                <img src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+                                     alt={character.name}/>
                             </li>
                             <div className={'character-box__mid'}></div>
-                            <li className={'character-box__name'} key={character.name}>
-                                {character.name}
-                            </li>
+                            <li className={'character-box__name'}>{character.name}</li>
                             {/*<li className={'character-box__description'} key={character.id}>*/}
                             {/*    {character.description}*/}
                             {/*</li>*/}
@@ -72,7 +73,6 @@ function MarvelCharacters() {
                         </a>
                     ))}
                 </ul>
-
             </div>
         );
     };
