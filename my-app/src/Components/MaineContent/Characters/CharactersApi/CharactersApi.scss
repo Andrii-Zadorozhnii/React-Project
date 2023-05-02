@@ -12,9 +12,22 @@
   gap: 10px;
   row-gap: 20px;
 
+  &__main-header{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    outline: none;
+    padding-bottom: 10px;
+  }
+
   &__main > h1 {
     text-align: center;
     padding-top: 20px;
+    color: white;
+    margin-right: 10px;
+
+
   }
 
   &__name {
@@ -51,13 +64,13 @@
     width: 150px;
     height: 350px;
     background: black;
-    transition: 0.5s;
+    transition: 0.3s;
 
     &:hover {
-      background-image: linear-gradient(to bottom, black 0%, black 0%, red 50%, red 100%);
+      background-image: linear-gradient(to bottom, black 0%, black 50%, red 50%, red 100%);
       background-position: 0 0;
       background-size: 100% 200%;
-      animation: fill .5s ease forwards;
+      animation: fill .8s ease forwards;
       background-clip: content-box;
 
       & img{

@@ -1,5 +1,9 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 import './CharactersApi.scss';
+import SearchCharacters from "../Search/SearchCharacters";
+import '../Search/SearchCharacters.scss';
+
+
 
 function MarvelCharacters() {
     const [name, setName] = useState([]);
@@ -42,8 +46,14 @@ function MarvelCharacters() {
     let Card = () => {
         return (
             <div className={'character-box__main'}>
-                <h1>Marvel Characters</h1>
-                <ul className={'character-box'}>
+                <div className='character-box__main-header'>
+                    <h1>Marvel Characters</h1>
+                    <SearchCharacters />
+                    <button className='search-box-btn' onClick={() => document.querySelector('.character-box').style.display = 'flex'}>
+                        All characters
+                    </button>
+                </div>
+                <ul className={'character-box'} style={{display: 'none'}}>
                     {name.map((character) => (
                         <a className={'character-box__link'} href={'/'}>
                             <li className={'character-box__image'} key={character.image}>
@@ -62,11 +72,12 @@ function MarvelCharacters() {
                         </a>
                     ))}
                 </ul>
+
             </div>
         );
     };
 
-    return <div>{<Card />}</div>;
+    return <div>{<Card/>}</div>;
 }
 
 export default MarvelCharacters;

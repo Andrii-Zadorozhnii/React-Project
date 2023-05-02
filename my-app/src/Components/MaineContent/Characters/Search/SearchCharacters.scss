@@ -1,0 +1,23 @@
+@use '../../../Styles/var.scss' as var;
+
+
+.search-box{
+
+
+  &-input{
+    width: 200px;
+    padding-left: 10px;
+    padding-right: 15px;
+    height: 25px;
+  }
+
+  &-btn{
+    background: red;
+    color: white;
+    border: none;
+    margin-left: 5px;
+    height: 25px;
+    text-align: center;
+    padding-left: 3px;
+  }
+}

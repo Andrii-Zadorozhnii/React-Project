@@ -1,28 +1,37 @@
 import { useState } from 'react';
+import {NavLink} from "react-router-dom";
 import './NavBar.scss';
-import CharactersApi from "../../MaineContent/Characters/CharactersApi/CharactersApi";
 
-const navMenu = ['NEWS', 'COMICS', 'CHARACTERS', 'MOVIES', 'TV SHOWS', 'GAMES', 'VIDEOS', 'MORE'];
-
-function NavBar() {
-    const [showCharacters, setShowCharacters] = useState(false);
-
-    const menu = navMenu.map((item, index) => {
-        return (
-            <a key={index} className={`navMenu-${index + 1}`} href={`#`} onClick={() => setShowCharacters(!showCharacters)}>
-                {item}
-            </a>
-        );
-    });
+const NavBar = () => {
 
     return (
-        <div>
-            <nav className="navMenu">
-                {menu}
-            </nav>
-            {showCharacters && <CharactersApi />}
-        </div>
-    );
+        <nav className="navMenu">
+            <div className="navItem">
+                <NavLink to='/news'>NEWS</NavLink>
+            </div>
+            <div className="navItem">
+                <NavLink to='/comics'>COMICS</NavLink>
+            </div>
+            <div className="navItem">
+                <NavLink to='/characters'>CHARACTERS</NavLink>
+            </div>
+            <div className="navItem">
+                <NavLink to='/movies'>MOVIES</NavLink>
+            </div>
+            <div className="navItem">
+                <NavLink to='/tvshow'>TV SHOWS</NavLink>
+            </div>
+            <div className="navItem">
+                <NavLink to='/games'>GAMES</NavLink>
+            </div>
+            <div className="navItem">
+                <NavLink to='/video'>VIDEO</NavLink>
+            </div>
+            <div className="navItem">
+                <NavLink to='/more'>MORE</NavLink>
+            </div>
+        </nav>
+    )
 }
 
 export default NavBar;

@@ -1,6 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Router } from 'react-router-dom';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 //Styles
 import './Components/Styles/reset.scss';
 import '../src/Components/Styles/general.scss';
@@ -15,15 +15,32 @@ import MainSection from "./Components/MaineContent/MainSection";
 import CharactersApi from "./Components/MaineContent/Characters/CharactersApi/CharactersApi";
 //***********************************************
 
+function App() {
+    const [hideMainSection, setHideMainSection] = useState(false);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <React.StrictMode>
-        <Header/>
-        <NavBar/>
-        <MainSection />
-        <Footer />
-        {/*<CharactersApi />*/}
+    const handleRouteClick = (route) => {
+        if (route === "/characters") {
+            setHideMainSection(true);
+        } else {
+            setHideMainSection(false);
+        }
+    }
 
-    </React.StrictMode>
-);
+    return (
+        <React.StrictMode>
+            <BrowserRouter>
+                <Header />
+                <NavBar onRouteClick={handleRouteClick} />
+                <div className="app-wrapper-content">
+                    <Routes>
+                        <Route path="/characters" element={<CharactersApi hideMainSection={hideMainSection} />} />
+                    </Routes>
+                    <MainSection style={{ display: hideMainSection ? 'none' : 'block' }} />
+                </div>
+                <Footer />
+            </BrowserRouter>
+        </React.StrictMode>
+    );
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));

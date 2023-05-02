@@ -1,0 +1,5 @@
+// Tasks
+
+1. Dont forget to change on click sections ( that for different section different components)
+2. On click of a card should open new component with all information about this card
+3. Add React Router for make one site application

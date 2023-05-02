@@ -9,10 +9,12 @@ header{
   padding: var.$sidePadding;
   border-bottom: var.$headerBorder;
 
+
 }
 
 .header-box{
   display: flex;
+  flex-wrap: wrap;
   height: 51px;
   background: var.$bgMainColor;
   color: var.$headerAndFooterColor;
