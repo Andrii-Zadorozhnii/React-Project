@@ -1,30 +1,26 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 function SearchCharacters() {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [inputData, setInputData] = useState("");
 
     const handleInputChange = (event) => {
-        setSearchTerm(event.target.value);
-    };
-
-    const handleSearch = () => {
-        // Do something with the search term
-        console.log(searchTerm);
+        const inputVal = event.target.value;
+        setInputData(inputVal);
+        localStorage.setItem("searchTerm", inputVal);
     };
 
     return (
-        <div className='search-box'>
-            <input
-                className='search-box-input'
-                value={searchTerm}
-                onChange={handleInputChange}
-            />
-            <button className='search-box-btn' onClick={handleSearch}>
-                Search
-            </button>
+        <div>
+            <div className="search-box">
+                <input
+                    className="search-box-input"
+                    value={inputData}
+                    onChange={handleInputChange}
+                />
+                <button className="search-box-btn">Search</button>
+            </div>
         </div>
     );
 }
-
 
 export default SearchCharacters;

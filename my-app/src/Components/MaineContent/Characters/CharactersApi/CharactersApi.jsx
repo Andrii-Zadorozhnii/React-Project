@@ -3,7 +3,13 @@ import './CharactersApi.scss';
 import SearchCharacters from '../Search/SearchCharacters';
 import '../Search/SearchCharacters.scss';
 
-//https://gateway.marvel.com/v1/public/comics?ts=1&apikey=9b9a40427eb372f72b3775e4f456a370&hash=97a77a62ca6b19c0c250ad87841df189
+const SearchCard = () => {
+    return (
+        <></>
+    )
+}
+
+//https://gateway.marvel.com/v1/public/characters?ts=1&apikey=9b9a40427eb372f72b3775e4f456a370&hash=97a77a62ca6b19c0c250ad87841df189
 function MarvelCharacters() {
     const [name, setName] = useState([]);
     const [showAll, setShowAll] = useState(false);
@@ -52,7 +58,7 @@ function MarvelCharacters() {
             <div className={'character-box__main'}>
                 <div className='character-box__main-header'>
                     <h1>Marvel Characters</h1>
-                    <SearchCharacters />
+                    <SearchCharacters/>
                     <button className='search-box-btn' onClick={toggleShowAll}>
                         {showAll ? 'Hide characters' : 'All characters'}
                     </button>
@@ -66,9 +72,6 @@ function MarvelCharacters() {
                             </li>
                             <div className={'character-box__mid'}></div>
                             <li className={'character-box__name'}>{character.name}</li>
-                            {/*<li className={'character-box__description'} key={character.id}>*/}
-                            {/*    {character.description}*/}
-                            {/*</li>*/}
                             <div className={'character-box__corner'}></div>
                         </a>
                     ))}
@@ -77,7 +80,13 @@ function MarvelCharacters() {
         );
     };
 
-    return <div>{<Card/>}</div>;
+    return (
+        <div>
+            <div>{<Card/>}</div>
+            <div>{<SearchCard/>}</div>
+        </div>
+    );
 }
+
 
 export default MarvelCharacters;
