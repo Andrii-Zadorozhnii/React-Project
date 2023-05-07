@@ -1,29 +1,22 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-//Styles
+
 import './Components/Styles/reset.scss';
 import '../src/Components/Styles/general.scss';
 
-//***********************************************
-
-//Components
 import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import NavBar from "./Components/Header/NavBar/NavBar";
 import MainSection from "./Components/MaineContent/MainSection";
 import CharactersApi from "./Components/MaineContent/Characters/CharactersApi/CharactersApi";
-//***********************************************
+import SearchResult from "./Components/MaineContent/Characters/Search/SearchResult";
 
 function App() {
     const [hideMainSection, setHideMainSection] = useState(false);
 
     const handleRouteClick = (route) => {
-        if (route === "/characters") {
-            setHideMainSection(true);
-        } else {
-            setHideMainSection(false);
-        }
+        setHideMainSection(route === "/characters");
     }
 
     return (

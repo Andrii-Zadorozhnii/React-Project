@@ -16,6 +16,7 @@ function Footer() {
                             fill="#EC1D24" width="100%" height="100%"></rect><path fill="#FEFEFE"
                                                                                    d="M31.5 48V4H21.291l-3.64 22.735L14.102 4H4v44h8V26.792L15.577 48h4.229l3.568-21.208V48z"></path></svg></span></a>
             </div>
+
             <ul className='footer-nav'>
                 {footerNav.map(navItem => (
                     <li className='footer-nav__item' key={navItem}><a className='footer-nav__item-link'
@@ -28,10 +29,12 @@ function Footer() {
                                                                        href='/'>{navItem2}</a></li>
                 ))}
             </ul>
+
             <div className='footer-promotion'>
                 <div className="main-footer__promotion">
                     <a className="main-footer__promotion-link"
                        href="https://www.marvel.com/insider?cid=Dcom_navigation_20200929_insider_footer">
+
                         <div className="main-footer__promotion-image">
                             <img src="https://cdn.marvel.com/content/1x/marvel_insider-topnav-logo-large2x.png"
                                  alt="Marvel Insider Logo" className="main-footer__promotion-image"></img>

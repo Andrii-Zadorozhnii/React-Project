@@ -12,10 +12,13 @@ body{
   padding: var.$sidePadding;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 
+  row-gap: 30px;
   bottom: 0;
   left: 0;
   right: 0;
+
 
   
 
@@ -27,14 +30,12 @@ body{
     width: 80px;
     margin-right: 60px;
     //align-items: center;
-    //margin: 0 auto;
+
   }
 
   &-nav {
     margin-right: 60px;
     width: 122px;
-    //align-items: center;
-    //margin: 0 auto;
 
     &__item {
       text-transform: uppercase;
