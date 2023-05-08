@@ -131,6 +131,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
+  max-height: 80%;
   height: fit-content;
   background-color: var.$bgMainColor;
   z-index: 999;
@@ -166,6 +167,7 @@
   &-content {
     display: flex;
     gap: 20px;
+
     @media (max-width: 768px) {
       display: block;
     }
@@ -208,8 +210,9 @@
 }
 
 .content-box {
-  max-width: 500px;
+  max-width: 1920px;
   width: 100%;
+
   @media (max-width: 768px) {
     align-items: center;
     margin: 0 auto;

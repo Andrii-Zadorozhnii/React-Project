@@ -51,7 +51,8 @@ function MarvelCharacters() {
     const filteredCharacters = characters.filter(character =>
         character.name.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    function seriesList(data){
+
+    function seriesList(data) {
         const seriesNames = data.map(series => series.name);
         return (
             <ul>
@@ -61,12 +62,13 @@ function MarvelCharacters() {
             </ul>
         );
     }
-    function comicsList(data){
+
+    function comicsList(data) {
         const seriesNames = data.map(series => series.name);
         return (
             <ul>
                 {seriesNames.map(name => (
-                    <li  style={{marginBottom: `5px`}} key={name}>- {name}</li>
+                    <li style={{marginBottom: `5px`}} key={name}>- {name}</li>
                 ))}
             </ul>
         );
@@ -130,23 +132,24 @@ function MarvelCharacters() {
                                     Description: <br/><br/>{description ? description :
                                     <div style={{display: 'flex'}}><p> Nothing to say</p></div>}
                                 </p>
-                                <div className={`character-box__modal-content_description`}>
-                                    Comics: <br/><br/>
-                                    <ul>
-                                        <p className={'character-box__modal-series'} >
-                                            {comics}
-                                        </p>
-                                    </ul>
+                                <div style={{display: 'flex'}}>
+                                    <div className={`character-box__modal-content_description`}>
+                                        Comics: <br/><br/>
+                                        <ul>
+                                            <p className={'character-box__modal-series'}>
+                                                {comics}
+                                            </p>
+                                        </ul>
+                                    </div>
+                                    <div className={`character-box__modal-content_description`}>
+                                        Series: <br/><br/>
+                                        <ul>
+                                            <p className={'character-box__modal-series'}>
+                                                {series}
+                                            </p>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div className={`character-box__modal-content_description`}>
-                                    Series: <br/><br/>
-                                    <ul>
-                                        <p className={'character-box__modal-series'} >
-                                            {series}
-                                        </p>
-                                    </ul>
-                                </div>
-
                             </div>
                         </div>
                     </div>
