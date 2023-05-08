@@ -132,22 +132,14 @@ function MarvelCharacters() {
                                     Description: <br/><br/>{description ? description :
                                     <div style={{display: 'flex'}}><p> Nothing to say</p></div>}
                                 </p>
-                                <div style={{display: 'flex'}}>
+                                <div style={{display: 'flex', gap: '50px'}}>
                                     <div className={`character-box__modal-content_description`}>
                                         Comics: <br/><br/>
-                                        <ul>
-                                            <p className={'character-box__modal-series'}>
                                                 {comics}
-                                            </p>
-                                        </ul>
                                     </div>
                                     <div className={`character-box__modal-content_description`}>
                                         Series: <br/><br/>
-                                        <ul>
-                                            <p className={'character-box__modal-series'}>
                                                 {series}
-                                            </p>
-                                        </ul>
                                     </div>
                                 </div>
                             </div>

@@ -1,11 +1,16 @@
 //Background Color
-
-$bgMainColor: #202020;
+:root {
+  --bg-color: #202020;
+}
+$bgMainColor: var(--bg-color);
 
 
 //Font Color
+:root {
+  --header-and-footer-color: white;
+}
+$headerAndFooterColor: var(--header-and-footer-color);
 
-$headerAndFooterColor: White;
 
 
 //padding

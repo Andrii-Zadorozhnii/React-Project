@@ -13,23 +13,26 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
   row-gap: 30px;
   bottom: 0;
   left: 0;
   right: 0;
-
-
-  
-
   padding-top: 80px;
   padding-bottom: 30px;
+
+  @media (max-width: 550px){
+    display: block;
+  }
 
 
   &-logo {
     width: 80px;
     margin-right: 60px;
     //align-items: center;
+    @media (max-width: 550px){
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
 
   }
 
@@ -37,11 +40,19 @@ body{
     margin-right: 60px;
     width: 122px;
 
+    @media (max-width: 550px){
+      margin: 0 auto;
+      text-align: center;
+      width: 250px;
+    }
+
     &__item {
       text-transform: uppercase;
       margin-bottom: 12px;
       font-size: 13px;
       letter-spacing: 1px;
+
+
 
 
       &-link {
@@ -59,12 +70,18 @@ body{
 .main-footer__promotion {
   margin-bottom: 20px;
 
+
+
   &-link {
     display: flex;
     gap: 30px;
     align-items: center;
     font-family: RobotoCondensed Bold,Trebuchet MS,Helvetica,Arial,sans-serif;
     font-size: 14px;
+
+    @media (max-width: 550px){
+      justify-content: center;
+    }
 
   }
 

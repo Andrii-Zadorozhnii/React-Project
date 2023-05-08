@@ -11,7 +11,7 @@
   & > h1 {
     text-transform: uppercase;
     text-align: center;
-    color: white;
+    color: var.$headerAndFooterColor;
     margin-right: 10px;
   }
 }
@@ -182,6 +182,8 @@
 
     &_description {
       margin-bottom: 50px;
+      max-width: 500px;
+      width: 100%;
     }
 
     &_image {
@@ -196,6 +198,8 @@
       @media (min-width: 768px) and (max-width: 4000px) {
         margin: 0;
       }
+      @media(min-width: 320px) and (max-width: 767px) {
+        margin: 0 auto;
 
 
 
@@ -203,6 +207,8 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+        }
       }
     }
 
@@ -212,6 +218,7 @@
 .content-box {
   max-width: 1920px;
   width: 100%;
+
 
   @media (max-width: 768px) {
     align-items: center;

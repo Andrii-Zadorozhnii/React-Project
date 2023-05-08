@@ -13,9 +13,20 @@
     justify-content: center;
     gap: 20px;
 
+    @media (max-width: 680px){
+        display: none;
+    }
+
+
     & > a{
         padding: 0 18px;
         font-size: var.$generalFontSize;
         font-weight: bold;
+
+    }
+}
+.navItem{
+    &:hover{
+        color: red;
     }
 }

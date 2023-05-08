@@ -1,0 +1,91 @@
+@use "../../../Styles/var.scss" as var;
+.burger-menu{
+  display: none;
+  @media (max-width: 680px){
+    display: block;
+  }
+}
+
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: 20px;
+  z-index: 9999;
+
+  background: var.$bgMainColor;
+  color: var.$headerAndFooterColor;
+
+  &__close{
+    position: fixed;
+    right: 0;
+    background: inherit;
+    border: none;
+    text-align: center;
+    padding:10px;
+    color: var.$headerAndFooterColor;
+
+  }
+
+  &__toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: var.$headerAndFooterColor;
+
+    //&__icon {
+    //  display: block;
+    //  width: 20px;
+    //  height: 2px;
+    //
+    //  transition: transform 0.2s ease-in-out;
+    //}
+
+    &:hover .burger-menu__icon {
+      transform: scale(1.2);
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200px;
+    height: 100vh;
+    background-color: var.$bgMainColor;
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%);
+
+    &.open {
+      transform: translateX(0%);
+    }
+
+    .navItem {
+      margin-top: 40px;
+      text-align: center;
+
+      a {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
+        color: var.$headerAndFooterColor;
+        padding: 10px 0;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: #f00;
+        }
+
+        &.active {
+          color: #f00;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+@use '../Styles/var.scss' as var;
+
+
+.Error-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  @media (max-width: 1200px){
+    padding: 0 20px;
+  }
+
+  @media (max-width: 630px){
+    margin-top: 80px;
+  }
+
+
+  &__text{
+    font-size: 100px;
+    color: var.$headerAndFooterColor;
+    @media (max-width: 950px){
+      text-align: center;
+    }
+  }
+}
+
+.Error-page__image {
+  animation: slide-in 1s forwards;
+
+  @media (max-width: 630px){
+    display: none;
+  }
+
+  & img{
+      max-height: 670px;
+    height: 100%;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+

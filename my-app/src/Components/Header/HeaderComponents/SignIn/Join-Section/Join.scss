@@ -3,7 +3,7 @@
 .join-section {
   grid-area: join;
   height: 51px;
-  max-width: 171px;
+  max-width: 191px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -16,6 +16,10 @@
   text-align: center;
   font-size: var.$generalFontSize;
   justify-content: space-between;
+
+  @media (max-width: 680px){
+    display: none;
+  }
 
   & svg {
     width: 20px;

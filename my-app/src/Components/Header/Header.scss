@@ -3,11 +3,16 @@
 header {
 
   width: 100%;
-  height: 51px;
+  height: fit-content;
   background: var.$bgMainColor;
   color: var.$headerAndFooterColor;
   padding: var.$sidePadding;
   border-bottom: var.$headerBorder;
+
+  @media (max-width: 680px){
+    position: fixed;
+    top: 0;
+  }
 
 
 }
@@ -15,13 +20,16 @@ header {
 .header-box {
   display: flex;
   flex-wrap: wrap;
-  height: 51px;
+  height: fit-content;
   background: var.$bgMainColor;
   color: var.$headerAndFooterColor;
   justify-content: space-between;
   max-width: 1200px;
   margin: auto;
-  border-bottom: var.$headerBorder;
+
+
+
+
 }
 
 .search-area {
